@@ -699,7 +699,7 @@ main {
       text-transform: uppercase;
       border-radius: 0.5rem;
       border: 1px solid black;
-      background-color: #FEC184;
+      background-color: #fec184;
       transform: rotate(-3deg);
       font-weight: 800;
       letter-spacing: 2px;
@@ -760,41 +760,41 @@ main {
           text-transform: uppercase;
           border-radius: 0.5rem;
           border: 1px solid black;
-          background-color:#ef984a;
+          background-color: #ef984a;
           transform: rotate(-3deg);
           font-weight: 800;
           letter-spacing: 2px;
         }
-        h2{
+        h2 {
           font-family: reckless;
-          font-size: clamp(3rem,3vw,4rem);
+          font-size: clamp(3rem, 3vw, 4rem);
           font-weight: 100;
         }
-        p{
+        p {
           font-family: figtree;
-          font-size: clamp(1rem,0.5vw,3rem);
+          font-size: clamp(1rem, 0.5vw, 3rem);
           color: black;
         }
         button {
-        padding: 1rem 4rem;
-        border-radius: 3rem;
-        font-size: 1rem;
-        border: 1px solid transparent;
-        font-family: figtree;
-        transition: all ease 0.3s;
-        cursor: pointer;
-        border: 1px solid black;
-        &:hover {
-          background-color: #ef984a;
-          color: black;
+          padding: 1rem 4rem;
+          border-radius: 3rem;
+          font-size: 1rem;
+          border: 1px solid transparent;
+          font-family: figtree;
+          transition: all ease 0.3s;
+          cursor: pointer;
           border: 1px solid black;
+          &:hover {
+            background-color: #ef984a;
+            color: black;
+            border: 1px solid black;
+          }
         }
-      }
       }
     }
   }
 
-  #section8{
+  #section8 {
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -802,9 +802,9 @@ main {
     align-items: start;
     padding: 2rem;
     gap: 2rem;
-    background-color: #FAEDCE;
+    background-color: #faedce;
 
-    &>button {
+    #journal {
       width: fit-content;
       font-family: midnight;
       font-size: clamp(2rem, 4vw, 4.5rem);
@@ -817,26 +817,24 @@ main {
       font-weight: 800;
       letter-spacing: 2px;
     }
-    h1{
+    h1 {
       font-family: reckless;
-      font-size: clamp(2.5rem,3.5vw,5rem);
+      font-size: clamp(2.5rem, 3.5vw, 5rem);
       font-weight: 100;
-
     }
 
-    .cards-container{
+    .cards-container {
       width: 100%;
       display: flex;
       overflow-x: auto;
       gap: 1.5rem;
-      background-color: #73b321;
       &::-webkit-scrollbar {
         display: none;
       }
 
       .card {
-        width: clamp(20rem, 30vw, 24rem);
-        height: clamp(25rem, 30vw, 29rem);
+        width: clamp(20rem, 20vw, 22rem);
+        height: clamp(25rem, 25vw, 25rem);
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -845,119 +843,79 @@ main {
         border-radius: 1rem;
         position: relative;
         border: 1px solid black;
-        // &:nth-child(1) {
-        //   background-color: #f4a779;
-        //   .sec5-card-btm {
-        //     background-color: #e9683c;
-        //   }
-        // }
-        // &:nth-child(2) {
-        //   background-color: #aad566;
-        //   .text {
-        //     h4 {
-        //       font-size: clamp(1.5rem, 2vw, 2.5rem);
-        //     }
-        //   }
-        //   .sec5-card-btm {
-        //     background-color: #73b321;
-        //   }
-        // }
-        // &:nth-child(3) {
-        //   background-color: #fec859;
-        //   .text {
-        //     h4 {
-        //       font-size: clamp(1.5rem, 2vw, 2.5rem);
-        //     }
-        //   }
-        //   .sec5-card-btm {
-        //     background-color: #feac00;
-        //   }
-        // }
-        // &:nth-child(4) {
-        //   background-color: #acdb66;
-        //   .sec5-card-btm {
-        //     background-color: #8ab73d;
-        //   }
-        // }
-        // &:nth-child(5) {
-        //   background-color: #d8b9c6;
-        //   .sec5-card-btm {
-        //     background-color: #c689c0;
-        //   }
-        // }
 
-        .img-cont{
+        .img-cont {
           height: 80%;
           width: 100%;
-          background-color: orange;
+          background-color: #2a264c;
           border-top-left-radius: 1rem;
           border-top-right-radius: 1rem;
-          button{
-            margin: 0.5rem;
-            padding: .5rem 1rem;
+          position: relative;
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          button {
+            padding: 0rem 0.5rem;
             border: 1px solid black;
             background-color: white;
             font-family: midnight;
             border-radius: 0.5rem;
-            font-size: clamp(1.5rem,2vw,3rem);
+            font-size: clamp(1.5rem, 2vw, 3rem);
+            position: absolute;
+            top: 0.5rem;
+            left: 0.5rem;
+            text-transform: uppercase;
+            z-index: 9;
+            transition: all ease 0.4s;
+          }
+          img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            &:nth-child(3){
+              background-color: #73b321;
+            }
+            transition: all ease 0.3s;
+          }
+
+          &:hover img{
+            transform: scale(1.2);
+          }
+          &:hover button{
+            transform: rotate(-5deg);
           }
         }
-        .btm-text{
+        .btm-text {
           height: 20%;
           width: 100%;
-          background-color: blanchedalmond;
+          background-color: #cbd8e0;
+          font-family: figtree;
+          font-size: clamp(1rem,1rem, 1.2rem);
           align-content: center;
           padding: 1rem;
           border-bottom-left-radius: 1rem;
           border-bottom-right-radius: 1rem;
+          text-transform: uppercase;
         }
-        // .sec5-card-btm {
-        //   width: 95%;
-        //   min-height: 7rem;
-        //   align-self: center;
-        //   bottom: 1rem;
-        //   padding: 0.5rem;
-        //   border-radius: 1rem;
-        //   border: 1px solid black;
-        //   display: flex;
-        //   overflow: hidden;
-        //   .img-cont {
-        //     width: clamp(4rem, 20%, 5.5rem);
-        //     flex-shrink: 0;
-        //     height: 100%;
-        //     display: flex;
-        //     justify-content: center;
-        //     align-items: center;
-        //     img {
-        //       width: 100%;
-        //       aspect-ratio: 1/1;
-        //       object-fit: contain;
-        //     }
-        //   }
-        //   .card-btm-right {
-        //     display: flex;
-        //     justify-content: space-between;
-        //     align-items: center;
-        //     padding: 0.5rem 1rem;
-        //     flex: 1;
-        //     gap: 1rem;
-        //     border-left: 1px solid black;
-        //     p {
-        //       flex: 1;
-        //       font-size: clamp(0.85rem, 1vw, 1.1rem);
-        //       color: rgb(0, 0, 0);
-        //       font-family: Roboto;
-        //       text-align: start;
-        //     }
-        //     & > button {
-        //       width: fit-content;
-        //       height: fit-content;
-        //       padding: clamp(0.7rem, 1vw, 1rem) clamp(1rem, 2vw, 1.3rem);
-        //       border-radius: 2rem;
-        //       border: 1px solid black;
-        //     }
-        //   }
-        // }
+      }
+    }
+    #explore {
+      padding: 1rem 4rem;
+      border-radius: 3rem;
+      font-size: 1rem;
+      border: 1px solid transparent;
+      font-family: figtree;
+      transition: all ease 0.3s;
+      align-self: center;
+      cursor: pointer;
+      color: white;
+      background-color: #2a264c;
+      border: 1px solid black;
+      &:hover {
+        background-color: white;
+        color: black;
+        border: 1px solid black;
       }
     }
   }
@@ -1244,16 +1202,16 @@ main {
         }
       }
     }
-    #section7{
+    #section7 {
       text-align: start;
-      gap: .5rem;
-      .product{
+      gap: 0.5rem;
+      .product {
         flex-direction: row;
         padding: 0 3rem;
-        img{
+        img {
           left: 20%;
         }
-        .info{
+        .info {
           gap: 2rem;
           align-items: start;
         }
