@@ -873,16 +873,16 @@ main {
             height: 100%;
             width: 100%;
             object-fit: cover;
-            &:nth-child(3){
+            &:nth-child(3) {
               background-color: #73b321;
             }
             transition: all ease 0.3s;
           }
 
-          &:hover img{
+          &:hover img {
             transform: scale(1.2);
           }
-          &:hover button{
+          &:hover button {
             transform: rotate(-5deg);
           }
         }
@@ -891,7 +891,7 @@ main {
           width: 100%;
           background-color: #cbd8e0;
           font-family: figtree;
-          font-size: clamp(1rem,1rem, 1.2rem);
+          font-size: clamp(1rem, 1rem, 1.2rem);
           align-content: center;
           padding: 1rem;
           border-bottom-left-radius: 1rem;
@@ -919,6 +919,63 @@ main {
       }
     }
   }
+
+  #section9 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    .img-container {
+      width: 100%;
+      height: 50%;
+      overflow: hidden;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: 80% 50%;
+      }
+    }
+    .description {
+      height: 50%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      background-color: #f15f10;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+
+      h1 {
+        font-size: clamp(3rem, 3vw, 4rem);
+        font-family: reckless;
+        font-weight: 100;
+      }
+      .sub-text {
+        height: 50%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        p {
+          font-family: figtree;
+          font-size: clamp(1.2rem, 1.5vw, 2rem);
+        }
+        button {
+          width: 90%;
+          padding: 1rem 6rem;
+          border-radius: 3rem;
+          border: 1px solid black;
+          font-family: figtree;
+          font-size: clamp(1rem, 1vw, 1.2rem);
+          color: black;
+        }
+      }
+    }
+  }
 }
 
 @media (min-width: 768px) {
@@ -927,6 +984,13 @@ main {
       .card-container {
         .card {
           width: 20%;
+        }
+      }
+    }
+    #section9{
+      .description{
+        .sub-text{
+          gap: 2rem;
         }
       }
     }
@@ -1214,6 +1278,36 @@ main {
         .info {
           gap: 2rem;
           align-items: start;
+        }
+      }
+    }
+    #section9 {
+      flex-direction: row;
+      position: relative;
+      .img-container {
+        width: 100%;
+        height: 100%;
+      }
+
+      .description {
+        position: absolute;
+        transform: translate(0, -50%);
+        margin: 0 2rem;
+        top: 50%;
+        width: 30%;
+        height: 90%;
+        border-radius: 1rem;
+        border: 1px solid black;
+        justify-content: space-between;
+        padding: 5rem 4rem 0 2rem;
+        text-align: start;
+        .sub-text{
+          align-items: start;
+          button{
+            width: fit-content;
+          padding: .9rem 4rem;
+          text-wrap-mode: nowrap;
+          }
         }
       }
     }

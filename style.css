@@ -883,10 +883,70 @@ main #section8 #explore:hover {
   color: black;
   border: 1px solid black;
 }
+main #section9 {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+main #section9 .img-container {
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+}
+main #section9 .img-container img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 80% 50%;
+     object-position: 80% 50%;
+}
+main #section9 .description {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #f15f10;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+main #section9 .description h1 {
+  font-size: clamp(3rem, 3vw, 4rem);
+  font-family: reckless;
+  font-weight: 100;
+}
+main #section9 .description .sub-text {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+main #section9 .description .sub-text p {
+  font-family: figtree;
+  font-size: clamp(1.2rem, 1.5vw, 2rem);
+}
+main #section9 .description .sub-text button {
+  width: 90%;
+  padding: 1rem 6rem;
+  border-radius: 3rem;
+  border: 1px solid black;
+  font-family: figtree;
+  font-size: clamp(1rem, 1vw, 1.2rem);
+  color: black;
+}
 
 @media (min-width: 768px) {
   main #section2 .card-container .card {
     width: 20%;
+  }
+  main #section9 .description .sub-text {
+    gap: 2rem;
   }
 }
 @media (min-width: 1024px) {
@@ -1155,5 +1215,35 @@ main #section8 #explore:hover {
   main #section7 .product .info {
     gap: 2rem;
     align-items: start;
+  }
+  main #section9 {
+    flex-direction: row;
+    position: relative;
+  }
+  main #section9 .img-container {
+    width: 100%;
+    height: 100%;
+  }
+  main #section9 .description {
+    position: absolute;
+    transform: translate(0, -50%);
+    margin: 0 2rem;
+    top: 50%;
+    width: 30%;
+    height: 90%;
+    border-radius: 1rem;
+    border: 1px solid black;
+    justify-content: space-between;
+    padding: 5rem 4rem 0 2rem;
+    text-align: start;
+  }
+  main #section9 .description .sub-text {
+    align-items: start;
+  }
+  main #section9 .description .sub-text button {
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 0.9rem 4rem;
+    text-wrap-mode: nowrap;
   }
 }/*# sourceMappingURL=style.css.map */
