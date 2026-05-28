@@ -1534,6 +1534,7 @@ main {
         footer {
           width: 100%;
           display: grid;
+          z-index: 9;
           flex-direction: unset;
           grid-template-columns: repeat(5, 1fr);
           grid-template-areas:
@@ -1569,6 +1570,32 @@ main {
               &::after {
                 display: none;
               }
+            }
+            ul{
+
+              li{
+                position: relative;
+                width: fit-content;
+                text-wrap-mode: nowrap;
+                cursor: pointer;
+                &::after{
+                  content: "";
+                  width: 0%;
+                  height: 1px;
+                  background-color: rgb(255, 255, 255);
+                  position: absolute;
+                  bottom: 0;
+                  left: 0;
+                  transition: all ease 0.3s;
+              }
+              &:hover {
+                color: white;
+                &::after{
+                width: 100%;
+                background-color: white;
+              }
+              }
+            }
             }
           }
         }
