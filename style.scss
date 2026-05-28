@@ -1153,7 +1153,7 @@ main {
       }
       p {
         font-family: figtree;
-        font-size: clamp(0.9rem, 1.3vw, 2rem);
+        font-size: clamp(0.9rem, 1vw, 1.1rem);
         margin-top: 10rem;
         text-align: center;
       }
@@ -1598,6 +1598,20 @@ main {
             }
             }
           }
+        }
+      }
+      .sec10-footer-img{
+        height: 90vh;
+        justify-content: space-between;
+        #brand-logo{
+          width: 15rem;
+        }
+        #hero-img{
+          transform: scale(4);
+          bottom: 15rem;
+        }
+        p{
+          width: 25%;
         }
       }
     }

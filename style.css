@@ -1118,7 +1118,7 @@ main #section10 .sec10-footer-img #hero-img {
 }
 main #section10 .sec10-footer-img p {
   font-family: figtree;
-  font-size: clamp(0.9rem, 1.3vw, 2rem);
+  font-size: clamp(0.9rem, 1vw, 1.1rem);
   margin-top: 10rem;
   text-align: center;
 }
@@ -1528,5 +1528,19 @@ main #section10 .sec10-footer-img p {
   main #section10 .sec10-top-container footer details ul li:hover::after {
     width: 100%;
     background-color: white;
+  }
+  main #section10 .sec10-footer-img {
+    height: 90vh;
+    justify-content: space-between;
+  }
+  main #section10 .sec10-footer-img #brand-logo {
+    width: 15rem;
+  }
+  main #section10 .sec10-footer-img #hero-img {
+    transform: scale(4);
+    bottom: 15rem;
+  }
+  main #section10 .sec10-footer-img p {
+    width: 25%;
   }
 }/*# sourceMappingURL=style.css.map */
