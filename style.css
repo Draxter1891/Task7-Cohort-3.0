@@ -888,6 +888,7 @@ main #section9 {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  border-bottom: 1px solid black;
 }
 main #section9 .img-container {
   width: 100%;
@@ -939,6 +940,11 @@ main #section9 .description .sub-text button {
   font-family: figtree;
   font-size: clamp(1rem, 1vw, 1.2rem);
   color: black;
+}
+main #section10 {
+  height: 100vh;
+  width: 100%;
+  background-color: #BFD1E0;
 }
 
 @media (min-width: 768px) {
