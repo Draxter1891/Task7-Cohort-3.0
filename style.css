@@ -1000,7 +1000,12 @@ main #section10 .sec10-top-container .sec10-center {
   justify-content: space-around;
   gap: 1rem;
 }
-main #section10 .sec10-top-container .sec10-center input {
+main #section10 .sec10-top-container .sec10-center .input-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main #section10 .sec10-top-container .sec10-center .input-btn input {
   width: 100%;
   height: clamp(4rem, 4vw, 4.3rem);
   border-radius: 0.5rem;
@@ -1008,7 +1013,7 @@ main #section10 .sec10-top-container .sec10-center input {
   padding: 0 1rem;
   font-size: clamp(1.2rem, 1.5vw, 2rem);
 }
-main #section10 .sec10-top-container .sec10-center button {
+main #section10 .sec10-top-container .sec10-center .input-btn button {
   width: 100%;
   padding: 1rem;
   border-radius: 3rem;
@@ -1018,7 +1023,7 @@ main #section10 .sec10-top-container .sec10-center button {
   font-size: clamp(1rem, 1.3vw, 2rem);
   transition: all ease 0.3s;
 }
-main #section10 .sec10-top-container .sec10-center button:hover {
+main #section10 .sec10-top-container .sec10-center .input-btn button:hover {
   border: 1px solid #2a264c;
   background-color: #feac00;
   color: black;
@@ -1453,6 +1458,7 @@ main #section10 .sec10-footer-img p {
   }
   main #section10 .sec10-top-container .sec10-center .input-btn {
     width: 60%;
+    flex-direction: row;
   }
   main #section10 .sec10-top-container .sec10-center .input-btn input {
     width: 60%;
